@@ -37,12 +37,9 @@ def write_log(message):
 
 
 
-auto = open('auto.py','wb')
+auto = open('auto.py', 'rb')
 const.autt = pickle.load(auto)
-auto.close
-print('\n' + str(const.autt))
-
-
+auto.close()
 
 
 
