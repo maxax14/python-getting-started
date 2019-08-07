@@ -22,7 +22,6 @@ def edit_seting():
     ed_aut = open('auto.py', 'wb')
     pickle.dump(const.autt, ed_aut)
     ed_aut.close()
-edit_seting()
 
 # створює лог файл
 def write_log(message):
