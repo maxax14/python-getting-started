@@ -40,7 +40,7 @@ def write_log(message):
 
 
 auto = open('auto.py','rb')
-const.setings = pickle.load(auto)
+const.autt = pickle.load(auto)
 auto.close
 print('\n' + str(const.autt))
 
@@ -610,8 +610,8 @@ def text(message):
     				{ch} 
     				
     				добавлен'''.format(ch = ms))
-    				
-    		
+    				edit_seting()
+    		            
     				const.aut = False
     				
     					
@@ -641,7 +641,8 @@ def text(message):
     				{m} 
     				
     				удалена'''.format(m = mis))
-    			
+                                
+    			        edit_seting()
     				const.dell = False
     				
     				
