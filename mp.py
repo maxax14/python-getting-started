@@ -23,7 +23,6 @@ def edit_seting():
     pickle.dump(const.autt, ed_aut)
     ed_aut.close()
 
-edit_seting()
 
 # створює лог файл
 def write_log(message):
@@ -32,7 +31,7 @@ def write_log(message):
         log_file.write(string)
         log_file.close()
 
-
+edit_seting()
 
 
 # зчитування налашувань
@@ -609,7 +608,8 @@ def text(message):
     				{ch} 
     				
     				добавлен'''.format(ch = ms))
- edit_seting()   				
+    				edit_seting() 
+ 
     				
     		            
     				const.aut = False
