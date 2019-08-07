@@ -16,19 +16,13 @@ print(bot.get_me())
 def edit_seting():
     
 
-    #збереження основних налаштувань
     
     
     ed_aut = open('auto.py', 'wb')
     pickle.dump(const.autt, ed_aut)
     ed_aut.close()
 edit_seting()
-# створює лог файл
-def write_log(message):
-    with open('log.log', 'a', encoding='utf-8') as log_file:
-        string = str(datetime.datetime.now())[0:19] + ': ' + str(message) + '\n'
-        log_file.write(string)
-        log_file.close()
+
 
 
 
@@ -37,8 +31,8 @@ def write_log(message):
 
 
 
-auto = open('auto.py', 'rb')
-const.autt = pickle.load(auto)
+ed_aut = open('auto.py','rb')
+const.autt = pickle.load(ed_aut)
 auto.close()
 
 
