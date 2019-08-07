@@ -21,7 +21,7 @@ def edit_seting():
     ed_aut = open('auto.py', 'wb')
     pickle.dump(const.autt, ed_aut)
     ed_aut.close()
-edit_seting()
+
 
 
 
@@ -30,10 +30,10 @@ edit_seting()
 # зчитування налашувань
 
 
-
-ed_aut = open('auto.py','rb')
-const.autt = pickle.load(ed_aut)
-auto.close()
+edit_seting()
+au = open('auto.py','rb')
+const.autt = pickle.load(au)
+au.close
 
 
 
