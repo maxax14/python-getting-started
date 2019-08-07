@@ -31,7 +31,7 @@ def write_log(message):
         log_file.write(string)
         log_file.close()
 
-edit_seting()
+
 
 
 # зчитування налашувань
