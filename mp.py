@@ -611,6 +611,7 @@ def text(message):
     				
     				добавлен'''.format(ch = ms))
     				edit_seting()
+    				
     		            
     				const.aut = False
     				
@@ -641,8 +642,9 @@ def text(message):
     				{m} 
     				
     				удалена'''.format(m = mis))
+    				edit_seting()
                                 
-    			        edit_seting()
+    			        
     				const.dell = False
     				
     				
