@@ -609,7 +609,7 @@ def text(message):
     				{ch} 
     				
     				добавлен'''.format(ch = ms))
-    				edit_seting()
+ edit_seting()   				
     				
     		            
     				const.aut = False
