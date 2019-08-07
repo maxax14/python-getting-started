@@ -25,7 +25,7 @@ def edit_seting():
 
 # створює лог файл
 def write_log(message):
-    with open('log.log', 'r', encoding='utf-8') as log_file:
+    with open('log.log', 'a', encoding='utf-8') as log_file:
         string = str(datetime.datetime.now())[0:19] + ': ' + str(message) + '\n'
         log_file.write(string)
         log_file.close()
@@ -37,7 +37,7 @@ def write_log(message):
 
 
 
-auto = open('auto.py','rb')
+auto = open('auto.py','wb')
 const.autt = pickle.load(auto)
 auto.close
 print('\n' + str(const.autt))
