@@ -637,12 +637,13 @@ def text(message):
     		for mis in acm:
     			if mis in const.autt:
     				const.autt.remove(mis)
+    				edit_seting()
     				bot.send_message(message.from_user.id, '''заявка 
     				
     				{m} 
     				
     				удалена'''.format(m = mis))
-    				edit_seting()
+    				
                                 
     			        
     				const.dell = False
