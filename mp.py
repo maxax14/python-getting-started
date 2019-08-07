@@ -13,6 +13,51 @@ bot = telebot.TeleBot('822808838:AAHnELRuKjnL7ynIdHYRxtZY6MXVd9TlvEg')
 print(bot.get_me())
 
 
+def edit_seting():
+    
+
+    #збереження основних налаштувань
+    
+    
+    ed_aut = open('auto.py', 'wb')
+    pickle.dump(const.autt, ed_aut)
+    ed_aut.close()
+
+
+
+# створює лог файл
+def write_log(message):
+    with open('log.log', 'a', encoding='utf-8') as log_file:
+        string = str(datetime.datetime.now())[0:19] + ': ' + str(message) + '\n'
+        log_file.write(string)
+        log_file.close()
+
+
+
+
+# зчитування налашувань
+
+
+
+auto = open('auto.py','rb')
+const.setings = pickle.load(auto)
+auto.close
+print('\n' + str(const.autt))
+
+
+
+
+
+
+
+
+
+write_log('Bot sterted ' + bot_version)
+
+
+
+
+
 
 
 
