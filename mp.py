@@ -14,14 +14,10 @@ print(bot.get_me())
 
 
 def edit_seting():
+	file = open("auto.py", "wb")
+	pickle.dump(const.autt, file)
+	file.close()
     
-
-    #збереження основних налаштувань
-    
-    
-    ed_aut = open('auto.py', 'wb')
-    pickle.dump(const.autt, ed_aut)
-    ed_aut.close()
 
 
 
@@ -45,25 +41,6 @@ auto.close
 print('\n' + str(const.autt))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@bot.message_handler(commands=['aaa'])
-def text(message):
-	bot.send_message(message.from_user.id, "падай")
-	const.aut = True
 
 
 #ответ на команду help
@@ -602,6 +579,7 @@ def text(message):
     			if  ms not in const.autt:
     				
     				const.autt.append(ms)
+    				edit_seting() 
     				
     				
     				bot.send_message(message.from_user.id,  '''Канал 
@@ -609,7 +587,8 @@ def text(message):
     				{ch} 
     				
     				добавлен'''.format(ch = ms))
-    				edit_seting() 
+    				
+    				
  
     				
     		            
