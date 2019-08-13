@@ -9,38 +9,15 @@ import os
 import math
 
 import const
-bot = telebot.TeleBot('822808838:AAHnELRuKjnL7ynIdHYRxtZY6MXVd9TlvEg')
+bot = telebot.TeleBot('822808838:AAGQ7pTrt2Wm8MHUdI2CgQZENTWdaO0YCBw')
 print(bot.get_me())
 
 
-def edit_seting():
-	file = open("auto.py", "wb")
-	pickle.dump(const.autt, file)
-	file.close()
-    
 
-
-
-# створює лог файл
-def write_log(message):
-    with open('log.log', 'r', encoding='utf-8') as log_file:
-        string = str(datetime.datetime.now())[0:19] + ': ' + str(message) + '\n'
-        log_file.write(string)
-        log_file.close()
-
-
-
-
-# зчитування налашувань
-
-
-
-auto = open('auto.py','rb')
-const.autt = pickle.load(auto)
-auto.close
-print('\n' + str(const.autt))
-
-
+@bot.message_handler(commands=['aaa'])
+def text(message):
+	bot.send_message(message.from_user.id, "падай")
+	const.aut = True
 
 
 #ответ на команду help
@@ -579,7 +556,6 @@ def text(message):
     			if  ms not in const.autt:
     				
     				const.autt.append(ms)
-    				edit_seting() 
     				
     				
     				bot.send_message(message.from_user.id,  '''Канал 
@@ -587,11 +563,13 @@ def text(message):
     				{ch} 
     				
     				добавлен'''.format(ch = ms))
+    				bot.send_message(847166105,  '''Канал 
     				
+    				{ch} 
     				
- 
+    				добавлен'''.format(ch = ms))
     				
-    		            
+    		
     				const.aut = False
     				
     					
@@ -616,15 +594,17 @@ def text(message):
     		for mis in acm:
     			if mis in const.autt:
     				const.autt.remove(mis)
-    				edit_seting()
     				bot.send_message(message.from_user.id, '''заявка 
     				
     				{m} 
     				
     				удалена'''.format(m = mis))
+    				bot.send_message(847166105, '''заявка 
     				
-                                
-    			        
+    				{m} 
+    				
+    				удалена'''.format(m = mis))
+    			
     				const.dell = False
     				
     				
