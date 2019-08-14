@@ -9,7 +9,7 @@ import os
 import math
 
 import const
-bot = telebot.TeleBot('822808838:AAGQ7pTrt2Wm8MHUdI2CgQZENTWdaO0YCBw')
+bot = telebot.TeleBot('822808838:AAEaBk_euGNqiMf7DCB1hddkuMZW77q_1lM')
 print(bot.get_me())
 
 
